@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login/Signup Container -->
+        <div id="login-signup" class="min-h-screen bg-gray-100 flex items-center justify-center">
+            <!-- Login Form -->
+            <div id="login" class="bg-white p-8 rounded-lg shadow-md w-96">
+                <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+                <form id="login-form">
+                    <div class="mb-4">
+                        <label for="login-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                <svg xmlns="http" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </span>
+                            <input type="email" id="login-email" class="pl-10 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email" required>
+                        </div>
+                        <p id="login-email-error" class="mt-1 text-xs text-red-500 hidden"></p>
+                    </div>
+                    <div class="mb-6">
+                        <label for="login-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </span>
+                            <input type="password" id="login-password" class="pl-10 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Login</button>
+                    <p class="mt-4 text-sm text-center text-gray-600">Don't have an account? <a id="signup-link" href="#" class="text-blue-500 hover:text-blue-600">Sign Up</a></p>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup" class="bg-white p-8 rounded-lg shadow-md w-96 hidden">
+                <h2 class="text-2xl font-bold mb-6 text-center">Sign Up</h2>
+                <form id="signup-form">
+                    <div class="mb-4">
+                        <label for="signup-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="signup-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="signup-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="signup-email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email" required>
+                        <p id="signup-email-error" class="mt-1 text-xs text-red-500 hidden"></p>
+                    </div>
+                    <div class="mb-6">
+                        <label for="signup-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" id="signup-password" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Sign Up</button>
+                    <p class="mt-4 text-sm text-center text-gray-600">Already have an account? <a id="login-link" href="#" class="text-blue-500 hover:text-blue-600">Log In</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="hidden container mx-auto pt-5">
+            <h1 class="text-3xl font-bold text-center">Welcome to Medical Data Analysis</h1>
+            <form id="upload-form" class="mt-6">
+                <div class="w-full h-64 border-2 border-dashed border-gray-300 rounded-lg flex flex-col justify-center items-center bg-gray-50 hover:bg-gray-100 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 16v6H8v-6H5l7-7 7 7h-3z"></path>
+                    </svg>
+                    <p class="text-gray-600 font-semibold">Upload Your Medical Data (PDF, X-ray)</p>
+                    <input type="file" id="file-upload" class="hidden">
+                </div>
+                <p id="selected-file" class="text-gray-600 text-sm mt-2 hidden"></p>
+
+                <div class="mt-4">
+                    <label for="disease-type" class="block text-sm font-medium text-gray-700 mb-2">What type of disease are we analyzing for?</label>
+                    <input type="text" id="disease-type" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter disease type (e.g., pneumonia, anemia)">
+                </div>
+
+                <button type="submit" class="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Start Analysis</button>
+            </form>
+
+            <button id="logout-btn" class="mt-6 w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-300">Log Out</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

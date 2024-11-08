@@ -1,0 +1,19 @@
+page segmentation methods 
+
+Page seamentation modes:_
+® Orientation and script detection (OSD) only._
+1_ Automatic page segmentation with OSD._     
+2. Automatic page segmentation, but no OSD, or OCR.
+3_ Fully automatic page segmentation, but no OSD. (Default)
+4 Assume a single column of text of variable sizes.
+5 Assume a single uniform block of vertically 
+aligned text.
+6 — Assume a single uniform block of text.    
+7 ‘Treat the image as a single text Line.     
+8 Treat the image as a single word.
+9 Treat the image as a single word in a circle.
+10 Treat the image as a single character.
+11 Sparse text. Find as much text as possible in no particular order. 
+12 Sparse text with OSD.
+13 Raw Line. Treat the image as a single text Line,
+bypassing hacks that are Tessenact-specific.
