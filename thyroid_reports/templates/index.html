@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typhoid Report Analysis</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medi-AI</h1>
+        <h3>Typhoid Report Scanner</h3> <br>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".pdf, .png, .jpg, .jpeg" required>
+            <button type="submit">Upload and Analyze</button><br>
+        </form>
+
+        {% if analysis %}
+        <h2>Extracted Text:</h2>
+        <pre>{{ extracted_text }}</pre>
+
+        <h2>Analysis:</h2>
+        <pre>{{ analysis }}</pre>
+        {% endif %}
+    </div>
+</body>
+</html>

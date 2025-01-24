@@ -40,4 +40,3 @@ def get_all_images():
         cursor.execute('SELECT path, description FROM images')
         return cursor.fetchall()  
 
-    
