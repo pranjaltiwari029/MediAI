@@ -19,6 +19,6 @@ def main():
     # Generate the final response using a local LLM
     answer = generate_answer(query, retrieved_text)
     print("\nFinal Answer:", answer)
-
+    
 if __name__ == "__main__":
     main()
