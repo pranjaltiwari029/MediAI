@@ -1,0 +1,6 @@
+flask
+pandas
+faiss-cpu
+sentence-transformers
+transformers
+torch

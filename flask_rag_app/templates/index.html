@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical RAG Chatbot</title>
+</head>
+<body>
+    <h2>Medical RAG Chatbot</h2>
+    <input type="text" id="query" placeholder="Ask a medical question...">
+    <button onclick="askQuestion()">Ask</button>
+    <p id="response"></p>
+
+    <script>
+        function askQuestion() {
+            let query = document.getElementById("query").value;
+            fetch('/ask', {
+                method: 'POST',
+                body: new URLSearchParams({'query': query}),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("response").innerText = data.answer;
+            });
+        }
+    </script>
+</body>
+</html>
