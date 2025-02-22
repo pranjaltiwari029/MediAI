@@ -55,6 +55,7 @@ Patient ID,Age,Gender,Symptoms Severity,Hemoglobin (g/dL),Platelet Count,Blood C
 54,64,Male,Low,11.8,218056,Escherichia coli,-,8.6,4.3,Azithromycin,14 days,Successful
 55,30,Male,High,11.6,271906,Staphylococcus,Escherichia coli,9.9,4.4,Amoxicillin,15 days,
 56,59,Female,Low,12.7,133464,Escherichia coli,Escherichia coli,9.4,3.7,Amoxicillin,13 days,Successful
+42,59,Female,Low,12.7,133464,Escherichia coli,Escherichia coli,9.4,3.7,Amoxicillin,13 days,Successful
 57,40,Male,High,10.8,143215,Staphylococcus,Escherichia coli,9,3.8,Amoxicillin,7 days,Unsuccessful
 58,31,Female,Low,13.3,169281,Escherichia coli,Escherichia coli,9.9,4,Ceftriaxone,10 days,Unsuccessful
 59,58,Female,Low,12.8,226660,Escherichia coli,Klebsiella pneumoniae,9.1,3.6,Azithromycin,7 days,Successful
