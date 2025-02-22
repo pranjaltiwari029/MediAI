@@ -1,4 +1,5 @@
 # medical symptom checker 
+
 import os
 import faiss
 import numpy as np
@@ -58,7 +59,7 @@ def ask():
     query = request.form['query']
     disease = request.form['disease']  # User selects disease (diabetes, thyroid, or typhoid)
     answer = retrieve_and_generate_answer(query, disease)
-    return jsonify({'answer': answer,'disclaimer': "This is an AI-generated response. Please consult a medical professional for confirmation."})
+    return jsonify({'answer': answer,'disclaimer': "This is an AI-generated response . Please consult a medical professional for confirmation."})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
