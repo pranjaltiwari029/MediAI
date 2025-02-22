@@ -1,3 +1,4 @@
+# checking for diabetes with rag
 import os
 import faiss
 import numpy as np
