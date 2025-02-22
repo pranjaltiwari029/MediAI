@@ -1,3 +1,4 @@
+# medical symptom checker 
 import os
 import faiss
 import numpy as np
